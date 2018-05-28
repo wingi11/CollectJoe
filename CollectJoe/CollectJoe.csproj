@@ -51,19 +51,28 @@
     <Compile Include="frmField.Designer.cs">
       <DependentUpon>frmField.cs</DependentUpon>
     </Compile>
-    <Compile Include="fromOptions.cs">
+    <Compile Include="frmOptions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fromOptions.Designer.cs">
-      <DependentUpon>fromOptions.cs</DependentUpon>
+    <Compile Include="frmOptions.Designer.cs">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScoreList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScoreList.Designer.cs">
+      <DependentUpon>frmScoreList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmField.resx">
       <DependentUpon>frmField.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fromOptions.resx">
-      <DependentUpon>fromOptions.cs</DependentUpon>
+    <EmbeddedResource Include="frmOptions.resx">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScoreList.resx">
+      <DependentUpon>frmScoreList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

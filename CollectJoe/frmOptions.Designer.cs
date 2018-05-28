@@ -29,32 +29,34 @@
         private void InitializeComponent()
         {
             this.gpxSpielfeld = new System.Windows.Forms.GroupBox();
-            this.lblSpielfeld = new System.Windows.Forms.Label();
-            this.lblBoxenHorizontal = new System.Windows.Forms.Label();
-            this.lblBoxenVertikal = new System.Windows.Forms.Label();
-            this.txtBoxenHorizontal = new System.Windows.Forms.TextBox();
             this.txtBoxenVertikal = new System.Windows.Forms.TextBox();
+            this.txtBoxenHorizontal = new System.Windows.Forms.TextBox();
+            this.lblBoxenVertikal = new System.Windows.Forms.Label();
+            this.lblBoxenHorizontal = new System.Windows.Forms.Label();
+            this.lblSpielfeld = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtBoxtyp3 = new System.Windows.Forms.TextBox();
+            this.lblBoxtyp3 = new System.Windows.Forms.Label();
             this.txtBoxtyp2 = new System.Windows.Forms.TextBox();
             this.txtBoxtyp1 = new System.Windows.Forms.TextBox();
             this.lblBoxtyp2 = new System.Windows.Forms.Label();
             this.lblBoxtyp1 = new System.Windows.Forms.Label();
             this.lblWertungen = new System.Windows.Forms.Label();
-            this.lblBoxtyp3 = new System.Windows.Forms.Label();
-            this.txtBoxtyp3 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnBoxtyp3Farbe = new System.Windows.Forms.Button();
+            this.lblBoxtyp3Farbe = new System.Windows.Forms.Label();
+            this.btnBoxtyp2Farbe = new System.Windows.Forms.Button();
+            this.lblBoxtyp2Farbe = new System.Windows.Forms.Label();
+            this.btnSpielfeldFarbe = new System.Windows.Forms.Button();
+            this.btnBoxenFarbe = new System.Windows.Forms.Button();
+            this.btnBoxtyp1Farbe = new System.Windows.Forms.Button();
             this.lblBoxtyp1Farbe = new System.Windows.Forms.Label();
             this.lblSpielfeldFarbe = new System.Windows.Forms.Label();
             this.lblBoxen = new System.Windows.Forms.Label();
             this.lblFarben = new System.Windows.Forms.Label();
-            this.btnBoxtyp1Farbe = new System.Windows.Forms.Button();
-            this.btnBoxenFarbe = new System.Windows.Forms.Button();
-            this.btnSpielfeldFarbe = new System.Windows.Forms.Button();
-            this.btnBoxtyp2Farbe = new System.Windows.Forms.Button();
-            this.lblBoxtyp2Farbe = new System.Windows.Forms.Label();
-            this.btnBoxtyp3Farbe = new System.Windows.Forms.Button();
-            this.lblBoxtyp3Farbe = new System.Windows.Forms.Label();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
+            this.btnSpeichern = new System.Windows.Forms.Button();
+            this.lblEinstellungen = new System.Windows.Forms.Label();
             this.gpxSpielfeld.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -73,33 +75,14 @@
             this.gpxSpielfeld.TabIndex = 0;
             this.gpxSpielfeld.TabStop = false;
             // 
-            // lblSpielfeld
+            // txtBoxenVertikal
             // 
-            this.lblSpielfeld.AutoSize = true;
-            this.lblSpielfeld.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpielfeld.Location = new System.Drawing.Point(7, 20);
-            this.lblSpielfeld.Name = "lblSpielfeld";
-            this.lblSpielfeld.Size = new System.Drawing.Size(118, 29);
-            this.lblSpielfeld.TabIndex = 0;
-            this.lblSpielfeld.Text = "Spielfeld";
-            // 
-            // lblBoxenHorizontal
-            // 
-            this.lblBoxenHorizontal.AutoSize = true;
-            this.lblBoxenHorizontal.Location = new System.Drawing.Point(9, 69);
-            this.lblBoxenHorizontal.Name = "lblBoxenHorizontal";
-            this.lblBoxenHorizontal.Size = new System.Drawing.Size(85, 13);
-            this.lblBoxenHorizontal.TabIndex = 1;
-            this.lblBoxenHorizontal.Text = "Boxen horizontal";
-            // 
-            // lblBoxenVertikal
-            // 
-            this.lblBoxenVertikal.AutoSize = true;
-            this.lblBoxenVertikal.Location = new System.Drawing.Point(9, 95);
-            this.lblBoxenVertikal.Name = "lblBoxenVertikal";
-            this.lblBoxenVertikal.Size = new System.Drawing.Size(74, 13);
-            this.lblBoxenVertikal.TabIndex = 2;
-            this.lblBoxenVertikal.Text = "Boxen vertikal";
+            this.txtBoxenVertikal.Location = new System.Drawing.Point(123, 92);
+            this.txtBoxenVertikal.Name = "txtBoxenVertikal";
+            this.txtBoxenVertikal.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxenVertikal.TabIndex = 4;
+            this.txtBoxenVertikal.Text = "10";
+            this.txtBoxenVertikal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtBoxenHorizontal
             // 
@@ -110,14 +93,33 @@
             this.txtBoxenHorizontal.Text = "20";
             this.txtBoxenHorizontal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtBoxenVertikal
+            // lblBoxenVertikal
             // 
-            this.txtBoxenVertikal.Location = new System.Drawing.Point(123, 92);
-            this.txtBoxenVertikal.Name = "txtBoxenVertikal";
-            this.txtBoxenVertikal.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxenVertikal.TabIndex = 4;
-            this.txtBoxenVertikal.Text = "10";
-            this.txtBoxenVertikal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lblBoxenVertikal.AutoSize = true;
+            this.lblBoxenVertikal.Location = new System.Drawing.Point(9, 95);
+            this.lblBoxenVertikal.Name = "lblBoxenVertikal";
+            this.lblBoxenVertikal.Size = new System.Drawing.Size(74, 13);
+            this.lblBoxenVertikal.TabIndex = 2;
+            this.lblBoxenVertikal.Text = "Boxen vertikal";
+            // 
+            // lblBoxenHorizontal
+            // 
+            this.lblBoxenHorizontal.AutoSize = true;
+            this.lblBoxenHorizontal.Location = new System.Drawing.Point(9, 69);
+            this.lblBoxenHorizontal.Name = "lblBoxenHorizontal";
+            this.lblBoxenHorizontal.Size = new System.Drawing.Size(85, 13);
+            this.lblBoxenHorizontal.TabIndex = 1;
+            this.lblBoxenHorizontal.Text = "Boxen horizontal";
+            // 
+            // lblSpielfeld
+            // 
+            this.lblSpielfeld.AutoSize = true;
+            this.lblSpielfeld.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSpielfeld.Location = new System.Drawing.Point(7, 20);
+            this.lblSpielfeld.Name = "lblSpielfeld";
+            this.lblSpielfeld.Size = new System.Drawing.Size(118, 29);
+            this.lblSpielfeld.TabIndex = 0;
+            this.lblSpielfeld.Text = "Spielfeld";
             // 
             // groupBox1
             // 
@@ -133,6 +135,24 @@
             this.groupBox1.Size = new System.Drawing.Size(274, 183);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
+            // 
+            // txtBoxtyp3
+            // 
+            this.txtBoxtyp3.Location = new System.Drawing.Point(123, 120);
+            this.txtBoxtyp3.Name = "txtBoxtyp3";
+            this.txtBoxtyp3.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxtyp3.TabIndex = 6;
+            this.txtBoxtyp3.Text = "-50";
+            this.txtBoxtyp3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lblBoxtyp3
+            // 
+            this.lblBoxtyp3.AutoSize = true;
+            this.lblBoxtyp3.Location = new System.Drawing.Point(9, 120);
+            this.lblBoxtyp3.Name = "lblBoxtyp3";
+            this.lblBoxtyp3.Size = new System.Drawing.Size(51, 13);
+            this.lblBoxtyp3.TabIndex = 5;
+            this.lblBoxtyp3.Text = "3. Boxtyp";
             // 
             // txtBoxtyp2
             // 
@@ -180,24 +200,6 @@
             this.lblWertungen.TabIndex = 0;
             this.lblWertungen.Text = "Wertungen";
             // 
-            // lblBoxtyp3
-            // 
-            this.lblBoxtyp3.AutoSize = true;
-            this.lblBoxtyp3.Location = new System.Drawing.Point(9, 120);
-            this.lblBoxtyp3.Name = "lblBoxtyp3";
-            this.lblBoxtyp3.Size = new System.Drawing.Size(51, 13);
-            this.lblBoxtyp3.TabIndex = 5;
-            this.lblBoxtyp3.Text = "3. Boxtyp";
-            // 
-            // txtBoxtyp3
-            // 
-            this.txtBoxtyp3.Location = new System.Drawing.Point(123, 120);
-            this.txtBoxtyp3.Name = "txtBoxtyp3";
-            this.txtBoxtyp3.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxtyp3.TabIndex = 6;
-            this.txtBoxtyp3.Text = "-50";
-            this.txtBoxtyp3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnBoxtyp3Farbe);
@@ -216,6 +218,64 @@
             this.groupBox2.Size = new System.Drawing.Size(274, 355);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
+            // 
+            // btnBoxtyp3Farbe
+            // 
+            this.btnBoxtyp3Farbe.Location = new System.Drawing.Point(123, 290);
+            this.btnBoxtyp3Farbe.Name = "btnBoxtyp3Farbe";
+            this.btnBoxtyp3Farbe.Size = new System.Drawing.Size(105, 23);
+            this.btnBoxtyp3Farbe.TabIndex = 13;
+            this.btnBoxtyp3Farbe.UseVisualStyleBackColor = true;
+            // 
+            // lblBoxtyp3Farbe
+            // 
+            this.lblBoxtyp3Farbe.AutoSize = true;
+            this.lblBoxtyp3Farbe.Location = new System.Drawing.Point(9, 296);
+            this.lblBoxtyp3Farbe.Name = "lblBoxtyp3Farbe";
+            this.lblBoxtyp3Farbe.Size = new System.Drawing.Size(51, 13);
+            this.lblBoxtyp3Farbe.TabIndex = 12;
+            this.lblBoxtyp3Farbe.Text = "3. Boxtyp";
+            // 
+            // btnBoxtyp2Farbe
+            // 
+            this.btnBoxtyp2Farbe.Location = new System.Drawing.Point(123, 261);
+            this.btnBoxtyp2Farbe.Name = "btnBoxtyp2Farbe";
+            this.btnBoxtyp2Farbe.Size = new System.Drawing.Size(105, 23);
+            this.btnBoxtyp2Farbe.TabIndex = 11;
+            this.btnBoxtyp2Farbe.UseVisualStyleBackColor = true;
+            // 
+            // lblBoxtyp2Farbe
+            // 
+            this.lblBoxtyp2Farbe.AutoSize = true;
+            this.lblBoxtyp2Farbe.Location = new System.Drawing.Point(9, 267);
+            this.lblBoxtyp2Farbe.Name = "lblBoxtyp2Farbe";
+            this.lblBoxtyp2Farbe.Size = new System.Drawing.Size(51, 13);
+            this.lblBoxtyp2Farbe.TabIndex = 10;
+            this.lblBoxtyp2Farbe.Text = "2. Boxtyp";
+            // 
+            // btnSpielfeldFarbe
+            // 
+            this.btnSpielfeldFarbe.Location = new System.Drawing.Point(123, 90);
+            this.btnSpielfeldFarbe.Name = "btnSpielfeldFarbe";
+            this.btnSpielfeldFarbe.Size = new System.Drawing.Size(105, 23);
+            this.btnSpielfeldFarbe.TabIndex = 9;
+            this.btnSpielfeldFarbe.UseVisualStyleBackColor = true;
+            // 
+            // btnBoxenFarbe
+            // 
+            this.btnBoxenFarbe.Location = new System.Drawing.Point(123, 60);
+            this.btnBoxenFarbe.Name = "btnBoxenFarbe";
+            this.btnBoxenFarbe.Size = new System.Drawing.Size(105, 23);
+            this.btnBoxenFarbe.TabIndex = 8;
+            this.btnBoxenFarbe.UseVisualStyleBackColor = true;
+            // 
+            // btnBoxtyp1Farbe
+            // 
+            this.btnBoxtyp1Farbe.Location = new System.Drawing.Point(123, 232);
+            this.btnBoxtyp1Farbe.Name = "btnBoxtyp1Farbe";
+            this.btnBoxtyp1Farbe.Size = new System.Drawing.Size(105, 23);
+            this.btnBoxtyp1Farbe.TabIndex = 7;
+            this.btnBoxtyp1Farbe.UseVisualStyleBackColor = true;
             // 
             // lblBoxtyp1Farbe
             // 
@@ -254,69 +314,32 @@
             this.lblFarben.TabIndex = 0;
             this.lblFarben.Text = "Farben";
             // 
-            // btnBoxtyp1Farbe
+            // btnSpeichern
             // 
-            this.btnBoxtyp1Farbe.Location = new System.Drawing.Point(123, 232);
-            this.btnBoxtyp1Farbe.Name = "btnBoxtyp1Farbe";
-            this.btnBoxtyp1Farbe.Size = new System.Drawing.Size(105, 23);
-            this.btnBoxtyp1Farbe.TabIndex = 7;
-            this.btnBoxtyp1Farbe.UseVisualStyleBackColor = true;
+            this.btnSpeichern.Location = new System.Drawing.Point(53, 448);
+            this.btnSpeichern.Name = "btnSpeichern";
+            this.btnSpeichern.Size = new System.Drawing.Size(125, 30);
+            this.btnSpeichern.TabIndex = 8;
+            this.btnSpeichern.Text = "Übernehmen";
+            this.btnSpeichern.UseVisualStyleBackColor = true;
             // 
-            // btnBoxenFarbe
+            // lblEinstellungen
             // 
-            this.btnBoxenFarbe.Location = new System.Drawing.Point(123, 60);
-            this.btnBoxenFarbe.Name = "btnBoxenFarbe";
-            this.btnBoxenFarbe.Size = new System.Drawing.Size(105, 23);
-            this.btnBoxenFarbe.TabIndex = 8;
-            this.btnBoxenFarbe.UseVisualStyleBackColor = true;
-            // 
-            // btnSpielfeldFarbe
-            // 
-            this.btnSpielfeldFarbe.Location = new System.Drawing.Point(123, 90);
-            this.btnSpielfeldFarbe.Name = "btnSpielfeldFarbe";
-            this.btnSpielfeldFarbe.Size = new System.Drawing.Size(105, 23);
-            this.btnSpielfeldFarbe.TabIndex = 9;
-            this.btnSpielfeldFarbe.UseVisualStyleBackColor = true;
-            // 
-            // btnBoxtyp2Farbe
-            // 
-            this.btnBoxtyp2Farbe.Location = new System.Drawing.Point(123, 261);
-            this.btnBoxtyp2Farbe.Name = "btnBoxtyp2Farbe";
-            this.btnBoxtyp2Farbe.Size = new System.Drawing.Size(105, 23);
-            this.btnBoxtyp2Farbe.TabIndex = 11;
-            this.btnBoxtyp2Farbe.UseVisualStyleBackColor = true;
-            // 
-            // lblBoxtyp2Farbe
-            // 
-            this.lblBoxtyp2Farbe.AutoSize = true;
-            this.lblBoxtyp2Farbe.Location = new System.Drawing.Point(9, 267);
-            this.lblBoxtyp2Farbe.Name = "lblBoxtyp2Farbe";
-            this.lblBoxtyp2Farbe.Size = new System.Drawing.Size(51, 13);
-            this.lblBoxtyp2Farbe.TabIndex = 10;
-            this.lblBoxtyp2Farbe.Text = "2. Boxtyp";
-            // 
-            // btnBoxtyp3Farbe
-            // 
-            this.btnBoxtyp3Farbe.Location = new System.Drawing.Point(123, 290);
-            this.btnBoxtyp3Farbe.Name = "btnBoxtyp3Farbe";
-            this.btnBoxtyp3Farbe.Size = new System.Drawing.Size(105, 23);
-            this.btnBoxtyp3Farbe.TabIndex = 13;
-            this.btnBoxtyp3Farbe.UseVisualStyleBackColor = true;
-            // 
-            // lblBoxtyp3Farbe
-            // 
-            this.lblBoxtyp3Farbe.AutoSize = true;
-            this.lblBoxtyp3Farbe.Location = new System.Drawing.Point(9, 296);
-            this.lblBoxtyp3Farbe.Name = "lblBoxtyp3Farbe";
-            this.lblBoxtyp3Farbe.Size = new System.Drawing.Size(51, 13);
-            this.lblBoxtyp3Farbe.TabIndex = 12;
-            this.lblBoxtyp3Farbe.Text = "3. Boxtyp";
+            this.lblEinstellungen.AutoSize = true;
+            this.lblEinstellungen.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.lblEinstellungen.Location = new System.Drawing.Point(60, 20);
+            this.lblEinstellungen.Name = "lblEinstellungen";
+            this.lblEinstellungen.Size = new System.Drawing.Size(190, 31);
+            this.lblEinstellungen.TabIndex = 9;
+            this.lblEinstellungen.Text = "Einstellungen";
             // 
             // frmOptionen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 501);
+            this.Controls.Add(this.lblEinstellungen);
+            this.Controls.Add(this.btnSpeichern);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gpxSpielfeld);
@@ -332,6 +355,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -363,6 +387,8 @@
         private System.Windows.Forms.Label lblSpielfeldFarbe;
         private System.Windows.Forms.Label lblBoxen;
         private System.Windows.Forms.Label lblFarben;
-        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ColorDialog colorDialog;
+        private System.Windows.Forms.Button btnSpeichern;
+        private System.Windows.Forms.Label lblEinstellungen;
     }
 }
