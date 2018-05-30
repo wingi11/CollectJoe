@@ -221,11 +221,13 @@
             // 
             // btnBoxtyp3Farbe
             // 
+            this.btnBoxtyp3Farbe.BackColor = System.Drawing.Color.Red;
             this.btnBoxtyp3Farbe.Location = new System.Drawing.Point(123, 290);
             this.btnBoxtyp3Farbe.Name = "btnBoxtyp3Farbe";
             this.btnBoxtyp3Farbe.Size = new System.Drawing.Size(105, 23);
             this.btnBoxtyp3Farbe.TabIndex = 13;
-            this.btnBoxtyp3Farbe.UseVisualStyleBackColor = true;
+            this.btnBoxtyp3Farbe.UseVisualStyleBackColor = false;
+            this.btnBoxtyp3Farbe.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // lblBoxtyp3Farbe
             // 
@@ -238,11 +240,13 @@
             // 
             // btnBoxtyp2Farbe
             // 
+            this.btnBoxtyp2Farbe.BackColor = System.Drawing.Color.Chartreuse;
             this.btnBoxtyp2Farbe.Location = new System.Drawing.Point(123, 261);
             this.btnBoxtyp2Farbe.Name = "btnBoxtyp2Farbe";
             this.btnBoxtyp2Farbe.Size = new System.Drawing.Size(105, 23);
             this.btnBoxtyp2Farbe.TabIndex = 11;
-            this.btnBoxtyp2Farbe.UseVisualStyleBackColor = true;
+            this.btnBoxtyp2Farbe.UseVisualStyleBackColor = false;
+            this.btnBoxtyp2Farbe.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // lblBoxtyp2Farbe
             // 
@@ -255,27 +259,33 @@
             // 
             // btnSpielfeldFarbe
             // 
+            this.btnSpielfeldFarbe.BackColor = System.Drawing.Color.Gray;
             this.btnSpielfeldFarbe.Location = new System.Drawing.Point(123, 90);
             this.btnSpielfeldFarbe.Name = "btnSpielfeldFarbe";
             this.btnSpielfeldFarbe.Size = new System.Drawing.Size(105, 23);
             this.btnSpielfeldFarbe.TabIndex = 9;
-            this.btnSpielfeldFarbe.UseVisualStyleBackColor = true;
+            this.btnSpielfeldFarbe.UseVisualStyleBackColor = false;
+            this.btnSpielfeldFarbe.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // btnBoxenFarbe
             // 
+            this.btnBoxenFarbe.BackColor = System.Drawing.Color.LightGray;
             this.btnBoxenFarbe.Location = new System.Drawing.Point(123, 60);
             this.btnBoxenFarbe.Name = "btnBoxenFarbe";
             this.btnBoxenFarbe.Size = new System.Drawing.Size(105, 23);
             this.btnBoxenFarbe.TabIndex = 8;
-            this.btnBoxenFarbe.UseVisualStyleBackColor = true;
+            this.btnBoxenFarbe.UseVisualStyleBackColor = false;
+            this.btnBoxenFarbe.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // btnBoxtyp1Farbe
             // 
+            this.btnBoxtyp1Farbe.BackColor = System.Drawing.Color.MediumBlue;
             this.btnBoxtyp1Farbe.Location = new System.Drawing.Point(123, 232);
             this.btnBoxtyp1Farbe.Name = "btnBoxtyp1Farbe";
             this.btnBoxtyp1Farbe.Size = new System.Drawing.Size(105, 23);
             this.btnBoxtyp1Farbe.TabIndex = 7;
-            this.btnBoxtyp1Farbe.UseVisualStyleBackColor = true;
+            this.btnBoxtyp1Farbe.UseVisualStyleBackColor = false;
+            this.btnBoxtyp1Farbe.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // lblBoxtyp1Farbe
             // 
@@ -322,6 +332,7 @@
             this.btnSpeichern.TabIndex = 8;
             this.btnSpeichern.Text = "Übernehmen";
             this.btnSpeichern.UseVisualStyleBackColor = true;
+            this.btnSpeichern.Click += new System.EventHandler(this.btnSpeichern_Click);
             // 
             // lblEinstellungen
             // 
@@ -337,7 +348,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 501);
+            this.ClientSize = new System.Drawing.Size(722, 501);
             this.Controls.Add(this.lblEinstellungen);
             this.Controls.Add(this.btnSpeichern);
             this.Controls.Add(this.groupBox2);
@@ -348,6 +359,7 @@
             this.MinimizeBox = false;
             this.Name = "frmOptionen";
             this.Text = "Optionen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmOptionen_FormClosing);
             this.gpxSpielfeld.ResumeLayout(false);
             this.gpxSpielfeld.PerformLayout();
             this.groupBox1.ResumeLayout(false);

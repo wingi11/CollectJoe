@@ -61,6 +61,7 @@
             this.btnSchliessen.TabIndex = 12;
             this.btnSchliessen.Text = "Schliessen";
             this.btnSchliessen.UseVisualStyleBackColor = true;
+            this.btnSchliessen.Click += new System.EventHandler(this.btnSchliessen_Click);
             // 
             // frmScoreList
             // 
@@ -75,6 +76,7 @@
             this.MinimizeBox = false;
             this.Name = "frmScoreList";
             this.Text = "Rangliste";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmOptionen_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
