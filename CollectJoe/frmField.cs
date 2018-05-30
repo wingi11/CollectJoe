@@ -12,6 +12,20 @@ namespace CollectJoe
 {
     public partial class frmField : Form
     {
+
+        private frmOptionen _fieldOptionen = new frmOptionen();
+        private frmEditScore _fieldEditScore;
+        private frmScoreList _fieldScoreList;
+
+        private Random random = new Random();
+
+        private int _gameDuration = 39999;
+        private int _playTime;
+
+        private string _scorePath;
+
+        private int _boxCountHorizontal;
+
         public frmField()
         {
             InitializeComponent();

@@ -80,6 +80,7 @@
             this.btnSpeichern.TabIndex = 14;
             this.btnSpeichern.Text = "Speichern";
             this.btnSpeichern.UseVisualStyleBackColor = true;
+            this.btnSpeichern.Click += new System.EventHandler(this.btnSpeichern_Click);
             // 
             // btnAbbrechen
             // 
@@ -89,6 +90,7 @@
             this.btnAbbrechen.TabIndex = 15;
             this.btnAbbrechen.Text = "Abbrechen";
             this.btnAbbrechen.UseVisualStyleBackColor = true;
+            this.btnAbbrechen.Click += new System.EventHandler(this.btnAbbrechen_Click);
             // 
             // frmEditScore
             // 
@@ -106,6 +108,7 @@
             this.MinimizeBox = false;
             this.Name = "frmEditScore";
             this.Text = "Resultat Speichern";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEditScore_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
