@@ -23,6 +23,9 @@ namespace CollectJoe
             RefreshScore();
         }
 
+        /// <summary>
+        /// Liest die hoghscoresdatei aus
+        /// </summary>
         public void RefreshScore()
         {
             if (_scorePfad == "" || _scorePfad == null || !File.Exists(_scorePfad))

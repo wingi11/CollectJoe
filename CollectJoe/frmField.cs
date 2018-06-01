@@ -56,6 +56,9 @@ namespace CollectJoe
             SetOptions();
         }
 
+        /// <summary>
+        /// Setzt die Optinonen vom Optionenfeld
+        /// </summary>
         public void SetOptions() {
             pnlFeld.BackColor = _fieldOptionen.GetColor("btnSpielfeldFarbe");
 
@@ -75,21 +78,11 @@ namespace CollectJoe
             }
         }
 
-        private string generiereName(int x, int y, int max)
-        {
-            int n;
-            if (x == 0)
-            {
-                n = y;
-            }
-            else
-            {
-                n = x * max + y;
-            }
-
-            return "btn_" + Convert.ToString(n);
-        }
-
+        /// <summary>
+        /// Schaut ob eine Box geklickt wird und setzt danach den Punktestand
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnBox_Click(object sender, EventArgs e)
         {
             if (tmr.Enabled)
@@ -106,6 +99,9 @@ namespace CollectJoe
             }
         }
 
+        /// <summary>
+        /// Baut das Feld mit den Buttons auf
+        /// </summary>
         public void BuildButtonField()
         {
             pnlFeld.Controls.Clear();
@@ -145,6 +141,9 @@ namespace CollectJoe
             }
         }
 
+        /// <summary>
+        /// Stopt das Spiel
+        /// </summary>
         public void StopGame()
         {
             tmr.Stop();
@@ -152,7 +151,7 @@ namespace CollectJoe
 
             if (Convert.ToInt32(txtPunktestand.Text) < 0)
             {
-                MessageBox.Show("Game over", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show("Game over", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -163,18 +162,11 @@ namespace CollectJoe
 
             btnOptionen.Enabled = true;
             btnRanglisteAnzeigen.Enabled = true;
-        }
+        }   
 
-        public void DrawOnField(int[] i)
-        {
-            ResetField();
-            foreach (int index in i)
-            {
-                _buttons[index].BackColor = _dctFarbeUndWert.ElementAt(_random.Next(0, _dctFarbeUndWert.Count)).Key;
-            }
-        }
-   
-
+        /// <summary>
+        /// Resettet das Feld
+        /// </summary>
         public void ResetField()
         {
             foreach (Button btn in _buttons)
@@ -187,6 +179,11 @@ namespace CollectJoe
             }
         }
 
+        /// <summary>
+        /// Bei jedem Tick werden die Knöpfe neu eingefärbt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tmr_Tick(object sender, EventArgs e)
         {
             if (_playTime == _gameDuration)
@@ -204,6 +201,11 @@ namespace CollectJoe
             _gameRunning = true;
         }
 
+        /// <summary>
+        /// EventListener für den Spiel starten Buntton
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSpielStarten_Click(object sender, EventArgs e)
         {
             if (!_gameRunning)
@@ -233,11 +235,21 @@ namespace CollectJoe
             }
         }
 
+        /// <summary>
+        /// EventListener für den Rangliste Anzeigen Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRanglisteAnzeigen_Click(object sender, EventArgs e)
         {
             _fieldScoreList.Show();
         }
 
+        /// <summary>
+        /// EventListener für den Optionen Anzeigen Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOptionen_Click(object sender, EventArgs e)
         {
             _fieldOptionen.Show();
