@@ -16,7 +16,7 @@ namespace CollectJoe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmOptionen());
+            Application.Run(new frmField());
         }
     }
 }

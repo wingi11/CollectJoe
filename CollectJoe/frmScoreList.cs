@@ -20,15 +20,24 @@ namespace CollectJoe
         {
             InitializeComponent();
             _scorePfad = scorePfad;
+            RefreshScore();
         }
 
         public void RefreshScore()
         {
-            if (!File.Exists(_scorePfad)) return;
+            if (_scorePfad == "" || _scorePfad == null || !File.Exists(_scorePfad))
+            {
+                txtRangliste.Text = "Rangliste nicht verfügbar.";
+            }
+            else
+            {
 
-            string[] lines = File.ReadAllLines(_scorePfad);
-
-            if (lines.Length == 0) txtRangliste.Text = "Rangliste nicht verfügbar!";
+                string[] lines = File.ReadAllLines(_scorePfad);
+                foreach(string line in lines)
+                {
+                    txtRangliste.AppendText(line + "\n");
+                }
+            }
         }
 
         /// <summary>

@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.pnlFeld = new System.Windows.Forms.Panel();
             this.btnSpielStarten = new System.Windows.Forms.Button();
-            this.label = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnOptionen = new System.Windows.Forms.Button();
+            this.btnRanglisteAnzeigen = new System.Windows.Forms.Button();
             this.lblPunktestand = new System.Windows.Forms.Label();
             this.txtPunktestand = new System.Windows.Forms.TextBox();
             this.tmr = new System.Windows.Forms.Timer(this.components);
@@ -54,24 +54,27 @@
             this.btnSpielStarten.TabIndex = 9;
             this.btnSpielStarten.Text = "Spiel Starten";
             this.btnSpielStarten.UseVisualStyleBackColor = true;
+            this.btnSpielStarten.Click += new System.EventHandler(this.btnSpielStarten_Click);
             // 
-            // label
+            // btnOptionen
             // 
-            this.label.Location = new System.Drawing.Point(727, 459);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(125, 30);
-            this.label.TabIndex = 10;
-            this.label.Text = "Einstellungen";
-            this.label.UseVisualStyleBackColor = true;
+            this.btnOptionen.Location = new System.Drawing.Point(727, 459);
+            this.btnOptionen.Name = "btnOptionen";
+            this.btnOptionen.Size = new System.Drawing.Size(125, 30);
+            this.btnOptionen.TabIndex = 10;
+            this.btnOptionen.Text = "Einstellungen";
+            this.btnOptionen.UseVisualStyleBackColor = true;
+            this.btnOptionen.Click += new System.EventHandler(this.btnOptionen_Click);
             // 
-            // button2
+            // btnRanglisteAnzeigen
             // 
-            this.button2.Location = new System.Drawing.Point(596, 459);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 30);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Rangliste anzeigen";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnRanglisteAnzeigen.Location = new System.Drawing.Point(596, 459);
+            this.btnRanglisteAnzeigen.Name = "btnRanglisteAnzeigen";
+            this.btnRanglisteAnzeigen.Size = new System.Drawing.Size(125, 30);
+            this.btnRanglisteAnzeigen.TabIndex = 11;
+            this.btnRanglisteAnzeigen.Text = "Rangliste anzeigen";
+            this.btnRanglisteAnzeigen.UseVisualStyleBackColor = true;
+            this.btnRanglisteAnzeigen.Click += new System.EventHandler(this.btnRanglisteAnzeigen_Click);
             // 
             // lblPunktestand
             // 
@@ -91,6 +94,10 @@
             this.txtPunktestand.TabIndex = 13;
             this.txtPunktestand.Text = "0";
             // 
+            // tmr
+            // 
+            this.tmr.Tick += new System.EventHandler(this.tmr_Tick);
+            // 
             // frmField
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -98,8 +105,8 @@
             this.ClientSize = new System.Drawing.Size(864, 501);
             this.Controls.Add(this.txtPunktestand);
             this.Controls.Add(this.lblPunktestand);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label);
+            this.Controls.Add(this.btnRanglisteAnzeigen);
+            this.Controls.Add(this.btnOptionen);
             this.Controls.Add(this.btnSpielStarten);
             this.Controls.Add(this.pnlFeld);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -107,7 +114,6 @@
             this.MinimizeBox = false;
             this.Name = "frmField";
             this.Text = "CollectJoe";
-            this.Load += new System.EventHandler(this.frmField_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,8 +123,8 @@
 
         private System.Windows.Forms.Panel pnlFeld;
         private System.Windows.Forms.Button btnSpielStarten;
-        private System.Windows.Forms.Button label;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnOptionen;
+        private System.Windows.Forms.Button btnRanglisteAnzeigen;
         private System.Windows.Forms.Label lblPunktestand;
         private System.Windows.Forms.TextBox txtPunktestand;
         private System.Windows.Forms.Timer tmr;

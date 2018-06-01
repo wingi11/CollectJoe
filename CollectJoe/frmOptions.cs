@@ -16,7 +16,7 @@ namespace CollectJoe
         {
             InitializeComponent();
         }
-
+        
         /// <summary>
         /// gibt die Horizontale länge zurück
         /// </summary>
